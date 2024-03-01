@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
+    <style>
+    .box{
+        height: 500px;
+        width: 500px;
+        border: 2px solid black ;
+        
+    }
+    .calculator{
+        text-align: center;
+        margin: 10px;
+       
+    }
+    .buttons{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 10px;
+        
+    }
+    .button , .button8{
+        width: 100%;
+        height: 100%;
+        font-size: 3rem;
+        background-color: rgb(145, 150, 150);
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+    <div class="calculator">
+        <input type="text" id="display" disabled style="height: 30px; width: 300px;  ">
+        <div class="buttons">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">+</button>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">-</button>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">*</button>
+            <button class="button">0</button>
+            <button class="button">C</button>
+            <button class="button8"  id="equalto"  onclick="findresult()">=</button>
+            <button class="button">/</button>
+            
+            
+            
+
+
+            
+        </div>
+
+       
+
+
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./calculator.js"> </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>login</h1>
+    <form onsubmit="setData(event)" >
+        <input type="text" placeholder="username" name="username" id="username">
+        <input type="password" placeholder="password" name="password" id="password">
+        <input type="submit" value="login" id="">
+    </form>
+  
+<script>
+    function setData(event){
+        event.preventDefault();
+        let username = event.target[0].value;
+        let place = event.target[1].value;
+
+        fetch(`/set-data?username=${username}&password=${password}`)
+        .then(res => res.text())
+        .then(data => {
+            getData();
+            alert(data);
+        })
+    }
+
+
+
+
+    function getData(){
+        let list = document.getElementById("list");
+        fetch("/get-data")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            list.innerHTML = "";
+            data.forEach(item => {
+                let li = `<li>name:${item.username},password:${item.password}</li>`;
+                list.innerHTML += li;
+            })
+        })
+    }
+    getData()
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="username" id="username" placeholder="username" onchange="display(event)"><br>
+    <img src="" alt="file" width="400"><br>
+    <h2>Username:</h2>
+    <h4>Email:</h4>
+    <script>
+        function display(event) {
+            let username = event.target.value;
+            fetch(`/api/get-file?username=${username}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                document.querySelector("img").src=`/api/image/${data.data.filename}`;
+                document.querySelector("h2").textContent += data.data.username;
+                document.querySelector("h4").textContent += data.data.email;
+
+            })
+            
+        }
+    </script>
+</body>
+</html>

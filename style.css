@@ -1,0 +1,151 @@
+#yes {
+    background-color: hsla(67, 33%, 10%,100%);
+    color:hsl(0, 34%, 65%);
+     height: 30vh;
+      width:50vw;
+  }
+
+  .box {
+    height:400px;
+    width: 400px;
+    margin: 2rem;
+    border-left: 1rem solid rgb(12, 11, 11);
+    border-top: 1rem solid rgb(224, 107, 107);
+    border-right: 1rem solid rgb(139, 221, 139);
+    border-bottom: 1rem groove rgb(219, 219, 78);
+    padding-inline: 2rem;
+    font-size:larger ;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-decoration: overline ;
+    box-shadow: 10px -10px 5px 15px grey;
+    text-shadow: 2px 2px  1px red;
+    border-start-start-radius: 2rem;
+    border-end-start-radius: 3rem;
+    border-start-end-radius: 2rem;
+    border-end-end-radius: 1rem;
+    background-image: url("");
+    background-size: cover;
+    background:conic-gradient(violet,indigo,blue,green,yellow,orange,red);
+    background-repeat: no-repeat;
+    background-color: aquamarine;
+  }
+  #hi {
+    background-color: black;
+    height:50%;
+    width:00%;
+  }
+
+  html
+  {
+font-size: 50px;
+  }
+  box {
+font-size: 50px;
+}
+p1 {
+
+font-size: 3rem;
+}
+p2 {
+font-size: 1em;
+}
+
+.pseudo {
+  background-color: aqua;
+}
+ .pseudo::first-line{
+  background-color: pink;
+ }
+
+ .pseudo::first-letter{
+  color:brown
+ }
+ .pseudo::selection{
+  background-color: yellowgreen;
+  color: black;
+ }
+
+ li {
+  background-color:rgb(236, 228, 228);
+ }
+ li::marker {
+  color: aqua;
+ }
+
+ button::before{
+  content: "9"background-color: black;
+ }
+
+ button:hover{
+  background-color: red;
+ }
+ /* input:focus{
+  background-color: aqua;
+ } */
+ a:active{
+  color:pink
+ }
+ a:visited{
+  color: black;
+ }
+.a:first-child{
+  color: aqua;
+  
+}
+.a:last-child{
+  color: blueviolet;
+}
+.a:first-of-type{
+  color: rgb(121, 76, 8);
+}
+.a:last-of-type{
+  color: aquamarine;
+}
+.a:nth-child(2n-1){
+color: blue;
+}
+.a:nth-of-type(3n){
+  background-color: chartreuse;
+}
+.a:nth-last-child(1){
+  color: darkgreen;
+}
+.a:nth-last-of-type(1){
+  background-color: cornflowerblue;
+}
+.ip:required{
+  background-color: darkcyan;
+}
+.ip:optional{
+  background-color: black;
+}
+.ip:disabled{
+  background-color: crimson;
+}
+p{
+  height: 200px;
+  width: 200px;
+}
+p:empty{
+  background-color: darkkhaki;
+}
+
+.ip:valid{
+color: aqua;
+}
+.ip:invalid{
+  background-color: rgb(133, 43, 141);
+}
+body{
+  height: 100vh;
+  width: 100vw;
+}
+.b{
+  display:inline-block ;
+  background-color: aqua;
+  border: 1px solid red;
+}
+
+

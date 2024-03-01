@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>details</h1>
+    <form onsubmit="setData(event)" >
+        <input type="text" placeholder="username" name="username" id="username">
+        <input type="text" placeholder="place" name="place" id="place">
+        <input type="submit" value="send" id="">
+    </form>
+    <ol id="list">
+
+    </ol>
+<script>
+    function setData(event){
+        event.preventDefault();
+        let username = event.target[0].value;
+        let place = event.target[1].value;
+
+        fetch(`/set-data?username=${username}&place=${place}`)
+        .then(res => res.text())
+        .then(data => {
+            getData();
+            alert(data);
+        })
+    }
+
+
+
+
+    function getData(){
+        let list = document.getElementById("list");
+        fetch("/get-data")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            list.innerHTML = "";
+            data.forEach(item => {
+                let li = `<li>name:${item.username},place:${item.place}</li>`;
+                list.innerHTML += li;
+            })
+        })
+    }
+    getData()
+</script>
+</body>
+</html>

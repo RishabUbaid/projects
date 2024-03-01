@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>This is home page</h2>
+    <form onsubmit="setTodo(event)">
+        <input type="text" name="todo" id="todo" placeholder="todo">
+        <input type="submit" value="add">
+    </form>
+    <script>
+        function setTodo(event) {
+            event.preventDefault();
+            let todo = event.target[0].value;
+            fetch("/api/set-todo", {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ todo })
+            })
+            .then(res => res.json())
+            .then(data => {
+                alert(data.msg);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+        }
+    </script>
+</body>
+</html>

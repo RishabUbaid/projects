@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <form onsubmit="setTodo(event)">
+      <input type="text" name="todo" placeholder="todo" />
+      <input type="submit" value="add" />
+    </form>
+    <ol id="list"></ol>
+    <script>
+      let list = document.getElementById("list");
+      function setTodo(event) {
+        event.preventDefault();
+        let todo = event.target[0].value;
+        fetch("/api/add-todo", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ todo }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert(data.msg);
+            print();
+          })
+          .catch((error) => {
+            console.log(error);
+            alert("Error occured");
+          });
+      }
+
+      function print() {
+        fetch("/api/get-todo")
+          .then((res) => res.json())
+          .then((data) => {
+            list.innerHTML = "";
+            data.todos.forEach((item) => {
+              let li = `<li>
+                        ${item.todo}
+                        <button onclick="edit('${item._id}')">edit</button>
+                        <button onclick="del('${item._id}')">delete</button>
+                        </li>`;
+              list.innerHTML += li;
+            });
+          });
+      }
+      print();
+      function edit(id) {
+        let newTodo = prompt("Enter the new todo:");
+        fetch("/api/update-todo", {
+          method: "put",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id, newTodo }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert(data.msg);
+            print();
+          });
+      }
+      function del(id) {
+        fetch("/api/delete-todo", {
+          method: "delete",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert(data.msg);
+            print();
+          });
+      }
+    </script>
+  </body>
+</html>

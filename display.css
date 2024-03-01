@@ -1,0 +1,101 @@
+body{
+    height: 200;
+    width: 100vw;
+  }
+  .outer-outer-box{
+    height: 800px;
+    width:800px;
+    background-color: cornflowerblue;
+  }
+  .outer-box{
+    height: 500px;
+    width: 500px;
+    background-color: darkmagenta;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    /*justify-content:space-between;*/
+    resize: both;
+    overflow: auto;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+
+   }
+  
+  
+  /*@keyframes cc{
+    0%{
+     transform: translateX(0,0);
+     background-color: aqua;
+    }
+    25%{
+      transform: translate(0,400px);
+      background-color: rgb(42, 48, 46);
+    }
+    50%{
+      transform: translate(400px,400px);
+    }
+    75%{
+      transform: translate(400px,0);
+    }
+    100%{
+      transform: translate(0,0);
+    }
+    } */
+
+  .box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(207, 241, 167);
+    border: 1px solid black;
+  }
+  .box:nth-child(1){
+    height: 50px;
+    align-self: flex-start;
+  }
+  /*
+  .box:nth-child(2){
+    flex-shrink: 4;
+    flex-grow: 2;
+    flex-basis: 200px;
+  }
+  .box:nth-child(3){
+    flex:3 3 300px;
+  }*/
+
+    /*animation-name: cc;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-direction: normal ;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-play-state: running; */
+   
+  /*a[target="_self"]{
+    background-color: black;
+  }*/
+a[href*="flower"]{
+  background-color: aqua;
+}
+
+table{
+  border: 2px solid black;
+  border-collapse:collapse ;
+}
+th,td{
+  border: 1px solid black;
+}
+video{
+  width: 100%;
+}
+
+
+
+p{
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px aquamarine;
+  font-size: 50px;
+  font-weight: 100%;
+  font-family: "Fuggles" ;
+}

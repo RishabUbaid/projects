@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form onsubmit="event.preventDefault()">
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="username" id="username" ><br>
+        <p id="u-msg"></p>
+    
+        <label for="email">email:</label>
+        <input type="email" name="email" placeholder="email" id="email" ><br>
+        <p id="m-msg"></p>
+
+        <label for="phone">phone:</label>
+        <input type="tel" name="phone" placeholder="phone" id="phone" ><br>
+        <p id="n-msg"></p>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="password" id="password" ><br>
+        <p id="p-msg"></p>
+
+        <label for="cpassword">confirm password:</label>
+        <input type="password" name="cpassword" placeholder="confirm password" id="cpassword" ><br>
+        <p id="cp-msg"></p>
+        <button onclick="validate()">submit</button>
+        
+    
+    
+    </form>
+    <script src="./form.js"> </script>
+
+</body>
+</html>

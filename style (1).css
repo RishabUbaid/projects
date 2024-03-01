@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 90%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.top-nav {
+    position: relative;
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    padding: 0.5rem;
+    gap: 1rem;
+    color: white;
+    align-items: center;
+    background-color: #222222;
+}
+.abg-logo {
+    height: 100%;
+}
+.top-nav-right {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    right: 0;
+}
+.top-nav-item {
+    display: flex;
+    border-right: 1px solid gray;
+    padding-inline: 0.5rem;
+    align-items: center;
+}
+.bottom-nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    gap: 4rem;
+    padding-inline: 9rem;
+    padding-block: 0.8rem;
+}
+.bottom-nav > img {
+    height: 100%;
+}
+.bottom {
+    height: 200%;
+    width: 100%;
+}
+.nav {
+    display: flex;
+    height: 100%;
+}
+.nav-item {
+    display: flex;
+    height: 60%;
+    padding-inline: 0.5rem;
+    color: #102035;
+    align-items: flex-end;
+}
+.nav-item:last-child {
+    color: red;
+}
+.nav-item:hover {
+    border-bottom:1px solid magenta;
+    font-weight: bolder;
+}
+.top-nav-right > input {
+    all: unset;
+    border-bottom: 1px solid #102035;
+}
+.top-nav-right > button {
+    all: unset;
+    height: 100%;
+    padding: 1rem;
+    margin-right: 9rem;
+    border-radius: 1.5rem;
+    background-color: #d3bf0e;
+}
+input::placeholder {
+    color: #102035;
+}
+.nav-item-drp {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    height: 20rem;
+    width: 100vw;
+    background-color: gray;
+}
+.nav-item-drp:hover {
+    display: block;
+}
+.men:hover ~ .men-drp {
+    display: block;
+}
+.women:hover ~ .women-drp {
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .top-nav-right {
+        display: none;
+    }
+    .bottom-nav {
+        padding-inline: 2rem;
+    }
+    .bottom-nav > img {
+        display: none;
+    }
+}

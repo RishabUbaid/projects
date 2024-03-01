@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html,body{
+   height: 100%;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif
+
+}
+.navbar{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: larger;
+   
+}
+.nav-item:hover{
+    border-bottom:1px solid magenta;
+    font-weight: bolder;
+}
+.box{
+    height: 500px;
+    width: 100%;
+    background-color: aqua;
+   
+}
+h2{
+    font-family: cursive;
+    padding-top: 30px;
+}
+
+h1{
+    color: rgb(143, 111, 22);
+    text-align: center;
+   margin-top: 5vh;
+   padding-top: 50px;
+   padding-bottom: 10px;
+   font-weight: bold;
+
+}
+.image-container{
+    position: relative;
+    text-align: center;
+    color: black;
+}
+.image{
+    width: 100%;
+}
+.text{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    padding: 10px;
+}
+h4{
+background-color: rgb(214, 90, 42);
+padding-top: 0;
+
+}
+h5{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+h3{
+    padding-left: 50px;
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color: rgb(63, 163, 130);
+    align-items: center;
+}
+.box2{
+    background-color: rgb(109, 177, 177);
+    height: 600px;
+   
+}
+.box3{
+    padding: 50px;
+    height: 600px;
+}
+.box4{
+    border: 1px solid black;
+    height: 100px;
+    
+}
+h6{
+    color: gray;
+}
+span{
+    color: rgb(206, 101, 101);
+}
+footer{
+    width: 100%;
+}
+ .section{
+    width: 100%;
+    box-shadow: 0 0 1px black;
+    background-color: rgb(160, 197, 197);
+     padding: 20px;
+}
+.section:first-child{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+.sub{
+    font-weight: bolder;
+}
+.subclass{
+    font-weight: lighter;
+}
+ .subclass:hover{
+    border-bottom:1px solid black; 
+} 
+ figcaption{
+   padding-top: 5px;
+ }
